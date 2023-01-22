@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import Login from "@/modules/auth/login";
 import HomePage from "@/modules/homepage";
 import Error from "@/modules/auth/error";
 import Register from "@/modules/auth/register";
-import Login from "@/modules/auth/login";
 import Dashboard from "@/modules/dashboard";
 import ProtectedRoute from "@/modules/auth/protected";
 
