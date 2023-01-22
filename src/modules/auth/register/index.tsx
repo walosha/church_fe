@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import AuthForm from "../../../components/authForm";
+import AuthForm from "@/components/authForm";
 import { schema } from "./validation";
 import { inputOptions } from "./contant";
 import { useNavigate } from "react-router-dom";
-import Helmet from "../../../components/helmet";
+import Helmet from "@/components/helmet";
 
 export default function SignUp() {
   const [loading, setLoading] = useState(false);
