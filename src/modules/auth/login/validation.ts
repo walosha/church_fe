@@ -3,6 +3,8 @@ import * as yup from "yup";
 
 export const schema = yup
   .object({
+    firstname: yup.string().required().min(3),
+    lastname: yup.string().required().min(3),
     email: yup
       .string()
       .email("Invalid email format")

@@ -8,14 +8,14 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
+            <Link to="/">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto sm:h-10"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
             <button
@@ -42,18 +42,18 @@ export default function Header() {
             </button>
           </div>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Sign in
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/register"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
             >
               Sign up
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -95,8 +95,8 @@ export default function Header() {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                 >
                   <svg
@@ -117,10 +117,10 @@ export default function Header() {
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Analytics
                   </span>
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                 >
                   <svg
@@ -141,10 +141,10 @@ export default function Header() {
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Engagement
                   </span>
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                 >
                   <svg
@@ -165,10 +165,10 @@ export default function Header() {
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Security
                   </span>
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                 >
                   <svg
@@ -189,10 +189,10 @@ export default function Header() {
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Integrations
                   </span>
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                 >
                   <svg
@@ -213,53 +213,53 @@ export default function Header() {
                   <span className="ml-3 text-base font-medium text-gray-900">
                     Automations
                   </span>
-                </a>
+                </Link>
               </nav>
             </div>
           </div>
           <div className="space-y-6 py-6 px-5">
             {/* <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-              <a
-                href="#"
+              <Link
+                to='/'
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Pricing
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to='/'
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Docs
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to='/'
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Help Center
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to='/'
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Guides
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to='/'
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Events
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to='/'
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Security
-              </a>
+              </Link>
             </div> */}
             <div>
               <Link

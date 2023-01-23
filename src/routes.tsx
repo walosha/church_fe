@@ -8,10 +8,6 @@ import ProtectedRoute from "@/modules/auth/protected";
 
 export const routes = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
     path: "/login",
     element: <Login />,
   },
@@ -19,7 +15,10 @@ export const routes = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
-
+  {
+    path: "/",
+    element: <HomePage />,
+  },
   {
     path: "/",
     element: <ProtectedRoute />,
