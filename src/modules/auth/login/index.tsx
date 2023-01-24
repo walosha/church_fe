@@ -1,9 +1,9 @@
-import AuthForm from "../../../components/authForm";
+import AuthForm from "@/components/authForm";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./validation";
 import { inputOptions } from "./contant";
-import Helmet from "../../../components/helmet";
+import Helmet from "@/components/helmet";
 import { signIn } from "../services";
 import { useMutation } from "react-query";
 import { credentialDTO } from "../enums";
