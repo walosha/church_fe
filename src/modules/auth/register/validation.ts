@@ -3,12 +3,13 @@ import * as yup from "yup";
 
 export const schema = yup
   .object({
-    fullname: yup
+    firstname: yup
       .string()
-      .matches(
-        /^(?:([A-Za-z]*)) (?:([A-Za-z]*))$/g,
-        "Please enter your full name"
-      )
+      .matches(/^(?:([A-Za-z]*))$/g, "Please enter your full name")
+      .required(),
+    lastname: yup
+      .string()
+      .matches(/^(?:([A-Za-z]*))$/g, "Please enter your full name")
       .required(),
     email: yup
       .string()

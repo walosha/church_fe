@@ -6,9 +6,11 @@ import { schema } from "./validation";
 import { inputOptions } from "./contant";
 import { useNavigate } from "react-router-dom";
 import Helmet from "@/components/helmet";
+import { SignUpCredentialDTO } from "../enums";
+import { useMutation } from "react-query";
+import { register } from "../services";
 
 export default function SignUp() {
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const {
@@ -18,12 +20,21 @@ export default function SignUp() {
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
-      fullname: "",
+      firstname: "",
+      lastname: "",
       email: "",
       password: "",
     },
     resolver: yupResolver(schema),
   });
+
+  const { mutate, isLoading, reset } = useMutation(register, {
+    onSuccess: (data) => console.log({ data }),
+  });
+
+  const onRegiseter = (data: SignUpCredentialDTO) => {
+    mutate(data);
+  };
 
   return (
     <Helmet title="Welcome">
@@ -35,10 +46,10 @@ export default function SignUp() {
         routeText="Login"
         btnText="REGISTER"
         inputOptions={inputOptions}
-        handleSubmit={handleSubmit(() => {})}
+        handleSubmit={handleSubmit(onRegiseter)}
         control={control}
         errors={errors}
-        isLoading={isSubmitting || loading}
+        isLoading={isSubmitting || isLoading}
       />
     </Helmet>
   );

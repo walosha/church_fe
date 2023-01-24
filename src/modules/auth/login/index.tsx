@@ -16,8 +16,6 @@ export default function Login() {
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
-      firstname: "",
-      lastname: "",
       email: "",
       password: "",
     },
